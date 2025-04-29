@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Water Monitoring Network</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky">
+        <div class="container">
+            <h1>Digital Water Monitoring Network</h1>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#dashboard">Dashboard</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" data-aos="fade-up">
+        <div class="container">
+            <h2>Real-Time Water Resource Monitoring</h2>
+            <p>Empowering communities and utilities to manage water quality, usage, and prevent waste with IoT technology.</p>
+            <a href="#dashboard" class="btn btn-primary">Explore Dashboard</a>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard" data-aos="fade-up">
+        <div class="container">
+            <h2>Real-Time Monitoring Dashboard</h2>
+            <div class="controls">
+                <div class="filter">
+                    <label for="time-range"><i class="fas fa-clock"></i> Time Range: </label>
+                    <select id="time-range">
+                        <option value="hour">Last Hour</option>
+                        <option value="day">Last Day</option>
+                        <option value="week">Last Week</option>
+                    </select>
+                </div>
+                <div class="chart-type">
+                    <label for="chart-type"><i class="fas fa-chart-line"></i> Chart Type: </label>
+                    <select id="chart-type">
+                        <option value="line">Line</option>
+                        <option value="bar">Bar</option>
+                    </select>
+                </div>
+                <button id="refresh-btn" class="btn btn-secondary"><i class="fas fa-sync-alt"></i> Refresh</button>
+            </div>
+            <div id="loading" class="loading"><i class="fas fa-spinner fa-spin"></i> Loading...</div>
+            <div id="alerts" class="alerts"></div>
+            <div class="grid">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-water"></i> Water Quality</h3>
+                    <p>Monitor pH, dissolved oxygen, and turbidity.</p>
+                    <div id="quality-data">Loading...</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-tint"></i> Water Usage</h3>
+                    <p>Track consumption patterns.</p>
+                    <div id="usage-data">Loading...</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Leak Detection</h3>
+                    <p>Identify and locate water leaks.</p>
+                    <div id="leak-data">Loading...</div>
+                </div>
+            </div>
+            <canvas id="waterChart"></canvas>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about" data-aos="fade-up">
+        <div class="container">
+            <h2>Why Monitor Water Resources?</h2>
+            <p>Our IoT-powered platform provides real-time insights to optimize water usage, ensure quality, and reduce waste, supporting sustainable water management for utilities and communities.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact" data-aos="fade-up">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Contact us to learn how our solutions can benefit your water management needs.</p>
+            <button onclick="alert('Contact form coming soon!')" class="btn btn-primary">Contact Us</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Digital Water Monitoring Network. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
